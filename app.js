@@ -2,6 +2,7 @@ var debug = require('debug')('fol');
 var app = require('./express').init();
 require('./tariq').init(app);
 require('./nicola').init(app);
+require('./othershit').init(app);
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
