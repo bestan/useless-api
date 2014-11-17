@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "name": "useless-api",
+  "description": "A useless api",
+  "keywords": [],
+  "private": true,
+  "config": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Folcopter/useless-api"
+  },
+  "bugs": {
+    "url": "https://github.com/Folcopter/useless-api/issues"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "main": "./lib/npm.js",
+  "bin": "./bin/npm-cli.js",
+  "dependencies": {
+    "debug": "^2.1.0",
+    "express": "^4.10.2",
+    "jade": "^1.7.0"
+  },
+  "bundleDependencies": [],
+  "devDependencies": {}
+}
