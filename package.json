@@ -19,6 +19,7 @@
   "main": "./lib/npm.js",
   "bin": "./bin/npm-cli.js",
   "dependencies": {
+    "body-parser": "^1.9.2",
     "debug": "^2.1.0",
     "express": "^4.10.2",
     "jade": "^1.7.0"
