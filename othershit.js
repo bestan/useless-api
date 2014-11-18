@@ -13,6 +13,6 @@ module.exports.init = function(app){
     if (req.query.name !== undefined){
       return res.status(200).send('Yo, ' + req.query.name + '!');
     }
-    return res.status(200).send('Yo');
+    return res.status(200).send('YO!');
   });
 };
