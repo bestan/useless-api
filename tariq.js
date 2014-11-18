@@ -1,4 +1,7 @@
 var debug = require('debug')('tariq');
+var math = require('./math');
+var pointless = require('./pointless-urls');
+
 module.exports.init = function(app){
   app.get('/tariq', function (req, res) {
     res.send('lol!')
@@ -36,28 +39,27 @@ module.exports.init = function(app){
   };
 
   app.post('/add', function(req,res){
-    calculate(req, res, function(x, y){
-      return x + y;
-    });
+    calculate(req, res, math.add);
   });
 
   app.post('/subtract', function(req,res){
-    calculate(req, res, function(x, y){
-      return x - y;
-    });
+    calculate(req, res, math.subtract);
   });
 
   app.post('/multiply', function(req,res){
-    calculate(req, res, function(x, y){
-      return x * y;
-    });
+    calculate(req, res, math.multiply);
   });
 
   app.post('/divide', function(req,res){
-    calculate(req, res, function(x, y){
-      return x / y;
-    });
+    calculate(req, res, math.divide);
   });
 
+  app.post('/mod', function(req,res){
+    calculate(req, res, math.mod);
+  });
+
+  app.get('/pointless', function(req,res){
+    res.redirect(pointless.random())
+  });
 
 };
