@@ -1,3 +1,5 @@
+var debug = require('debug')('pointless');
+
 var urls = [ "http://heeeeeeeey.com/",
   "http://thatsthefinger.com/",
   "http://cant-not-tweet-this.com/",
@@ -68,6 +70,8 @@ var urls = [ "http://heeeeeeeey.com/",
   "http://baconsizzling.com/"
 ];
 
-module.exports.random = function(){
-  return urls[Math.floor(Math.random()*urls.length)];
-}
+module.exports.init = function(app){
+  app.get('/pointless', function(req,res){
+    res.redirect(301, urls[Math.floor(Math.random()*urls.length)]);
+  });
+};

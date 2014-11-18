@@ -1,12 +1,8 @@
 var debug = require('debug')('fol');
 var app = require('./express').init();
-require('./tariq').init(app);
-require('./nicola').init(app);
+require('./math').init(app);
+require('./pointless').init(app);
 require('./othershit').init(app);
-
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-});
 
 var server = app.listen(3000, function () {
 
@@ -14,5 +10,4 @@ var server = app.listen(3000, function () {
   var port = server.address().port
 
   debug('Example app listening at http://%s:%s', host, port)
-
 });
